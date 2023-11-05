@@ -1,0 +1,79 @@
+  
+.parentContainer {
+    position: relative;
+    text-align: right;
+    font-size: 17px;
+    font-family: 'Arial', sans-serif; 
+    color: rgb(98, 111, 164);
+}
+
+
+.top-left {
+        position: relative;
+        top: 0;
+        left: 0;
+}
+
+
+.popup {
+    position: absolute;
+    top: 40px;
+    right: 23px;
+    cursor: pointer
+  }
+  
+  /* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 500px;
+    height: 500px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 37%;
+    margin-left: -50px;
+    transform: translate(0%, -65%)
+}
+  
+  /* Popup arrow */
+.popup .popuptext::after {
+    content: "Log In";
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fallDown 0.5s;
+    animation: fallDown 0.5s;
+}
+
+/* Add animation (fall down from the top) */
+@-webkit-keyframes fallDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(-65%);
+    }
+}
+
+@keyframes fallDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(-65%);
+    }
+}
